@@ -26,7 +26,7 @@ Next step, we transform the directory into a git directory.
 
 Now, when we run git status, we see that it is now a git repo.  However, when we run ls, nothing looks different. 
 
-> Question 1: How we can see what changed?  
+> Question: How we can see what changed?  
 
 Now, let's go about getting used to the basic git workflow. 
 
@@ -108,7 +108,7 @@ Now, no new code lives on the logistic branch, so you delete it.
 
   + git branch -d logistic
   
-# Part III:
+# Part IV:
 ## Staging, unstaging, and checking out old commits
 
 Imagine you have a giant csv file that you accidentally staged.  We will use tsv, because we already have ignored csv.
@@ -141,8 +141,8 @@ First, checkout master.  Then run
   
 Your repo should be back as it was before the commit.
 
-# Part IV
-## Github
+# Part V
+## Github, or the Cloud
 
 So far, we have been working locally, but the power of git is in the cloud.  
 Assuming you have a Git account, navigate to github.com/your_username.
@@ -186,5 +186,3 @@ You can add many remotes.  A common use is to fork a repository, then set one re
 
 
 
-Question Answers:  
-Question 1: If we use ls -a, we will see the .git folder.
