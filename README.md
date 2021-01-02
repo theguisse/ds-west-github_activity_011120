@@ -1,2 +1,39 @@
 # git_chi_sea_ds
-Git codealong for Chicago-Seattle Mod 1
+
+# Task 1: Fork and clone remote repository.  
+
+Why Fork?
+> Forking a repo creates a personal copy of the repository for you to do with as you wish. 
+You can make changes to files and save the changes on Github via your local fork.  
+You will be forking various repos, for example lecture repos, to follow along with on your computer. 
+By forking lectures and activities, you can write code in the jupyter notebooks associated with each lecture, then save these notes on the cloud by pushing to your fork.
+If you simply cloned the lecture repo, you would still be able to save your work locally on your computer, but you would not be able to push to the cloud.
+That is because you would be attempting to push changes to the original lecture material, and the next time Greg went to give that lecture, he would see your notes.  
+He therefore does not give you the necessary permissions to push.
+
+- For the first task, fork this repo: https://github.com/learn-co-students/ds-west-github_activity_011120
+
+- In the upper right portion of the window, you will see a button which reads `Fork`. 
+Click on that button, and fork the repo. 
+ 
+- You will be redirected to your copy of the repo, with a url which now has your name inserted:
+> https://github.com/<your_github_username>/ds-west-github_activity_011120 
+
+- Copy that url to your clip board.  
+- Open a terminal window, and navigate to Documents, or wherever it is that you store your Flatiron material.
+    - To do so, type `cd ~/Documents` after the command prompt.
+    - The ~ represents the home directory, i.e. the folder associated with your User.
+    - All the GUI stuff you are used to - Documents, Desktop, Downloads - are located after the ~/
+    - Try typing cd ~, followed by ls.  Make sure you can locate your Downloads, Documents, and Desktop.
+    
+- Once you have cd'ed into ~/Documents, type `git clone`, and paste the url of your Fork.
+    - git clone  https://github.com/<your_github_username>/ds-west-github_activity_011120  
+    - You just created a copy of the repository on your computer.
+    - run `ls`, and you will now see the folder name: ds-west-github_activity_011120
+    - run `cd ds-west-github_activity_011120` to change into the newly created folder.
+
+- Once inside the folder, run the following command: 
+    - git remote -v
+    - the -v option stands for verbose, and outputs the url associated with your remote.
+    - the origin remote should be linked to your fork: https://github.com/<your_github_username>/ds-west-github_activity_011120 
+    - Copy the output of git remote -v, and slack the results out to the Slack thread.
