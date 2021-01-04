@@ -5,11 +5,12 @@
 Why Fork?
 > Forking a repo creates a personal copy of the repository for you to do with as you wish. 
 You can make changes to files and save the changes on Github via your local fork.  
-You will be forking various repos, for example lecture repos, to follow along with on your computer. 
+
+> You will be forking various repos, for example lecture repos, to follow along with on your computer. 
 By forking lectures and activities, you can write code in the jupyter notebooks associated with each lecture, then save these notes on the cloud by pushing to your fork.
-If you simply cloned the lecture repo, you would still be able to save your work locally on your computer, but you would not be able to push to the cloud.
-That is because you would be attempting to push changes to the original lecture material, and the next time Greg went to give that lecture, he would see your notes.  
-He therefore does not give you the necessary permissions to push.
+
+> If you simply cloned the lecture repo, you would still be able to save your work locally on your computer, but you would not be able to push to the cloud.
+That is because you would be attempting to push changes to the original lecture repo, and the next time Greg went to give that lecture, he would see your notes. He therefore does not give you the necessary permissions to push.
 
 - For the first task, fork this repo: https://github.com/learn-co-students/ds-west-github_activity_011120
 
@@ -37,3 +38,37 @@ Click on that button, and fork the repo.
     - the -v option stands for verbose, and outputs the url associated with your remote.
     - the origin remote should be linked to your fork: https://github.com/<your_github_username>/ds-west-github_activity_011120 
     - Copy the output of git remote -v, and slack the results out to the Slack thread.
+   
+# Task 2: create a new file and push it to your fork.
+
+To complete this task, you have to be familiar with the essential Github workflow: add/commit/push.
+
+But before you start down the add/commit/push process, you need to have changes that you want to save in Github's memory.
+
+  - create a copy of the my_intro.txt called <your_name_intro>.txt
+    - to do so, use the copy command `cp` which takes two arguments: 1: the file to copy 2: the name of the new file
+    - in your terminal, type `cp my_intro_text.txt <your_name_intro>.txt
+    - type `ls` to confirm you can see the new file. 
+  - open that file in an editor and change the content
+    - For most of you, you should be able to type `open <your_name_intro>.txt`, and Text Edit will boot up.
+    - If that doesn't work, you can type `open .` to open up the finder window, then double click the file.
+    - If you are feeling adventurous, type `vim <your_name_intro>.txt`, and try to edit it using VIM.  
+
+Now that you have created a new file, add/commit/push.
+  - Type `git status`
+    - you should see your new file listed in red.
+    - that tells you the file has been changed
+  - Type `add <your_name_intro>.txt`
+    - doing so stages your change.  
+    - Now type `git status`.  You should see your file in green.  Green means your file has been staged, and is ready to commit.
+  - Type `commit -m <meaningful_message_here>`
+    - the -m option allows you to type in a message which describes what change you are making. These messages should be short and descriptive.  The convention is to use the imperitive tense: Add, change, fix, etc.
+    - Add a message like, `commit -m "Add personal intro file"`
+Once a commit has been made, you can type `git log`, and you will see the record of the commit, including the message.
+
+Now, push your commit to the fork.  
+    - type git push
+      - by default, git will push to the origin.  Because your personal, forked copy is associated to the origin remote, you can just write git push.
+      - You could also be explicit, and write git push origin master
+      - Navigate to the Github url of your fork, and make sure you can see your new file
+    

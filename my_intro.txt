@@ -1,5 +1,4 @@
 Name: Max Barry
-Email: max.barry@flatironschool.com 
 Favorite City: Barcelona
 Favorite Food: Spicy Cheese Crunchies
-Astrology sign: Virgo
+Sign: Virgo
