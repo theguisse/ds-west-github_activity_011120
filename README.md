@@ -66,9 +66,65 @@ Now that you have created a new file, add/commit/push.
     - Add a message like, `commit -m "Add personal intro file"`
 Once a commit has been made, you can type `git log`, and you will see the record of the commit, including the message.
 
-Now, push your commit to the fork.  
-    - type git push
+Now, push your commit to the fork.
+  
+    - Type git push
       - by default, git will push to the origin.  Because your personal, forked copy is associated to the origin remote, you can just write git push.
       - You could also be explicit, and write git push origin master
       - Navigate to the Github url of your fork, and make sure you can see your new file
     
+# Task 3: Fetch/Merge or Pull new content from the upstream repository.
+
+In order to retrieve new content from Github, you can use `git pull`.
+By default, the `git pull` command retrieves content from the `origin` remote.  
+Remotes are variables which link your local version of a repository to the cloud, and there can be multiple links.
+I will push a new file called 'zen_of_python.txt' to the original repo. 
+
+In order to get the `zen_of_python.txt` onto your computer, you now have to set up a new remote pointing to the original repo.
+    - To do so, run the command `git remote add upstream `
+    - Notice that the url is the original repo, not your fork.
+    - Now, when you type, `git remote -v` you should see two remotes, one pointing to your fork, and one pointing to the original repo.
+    
+If you successfully added the remote, you can pull the new content:
+    - Run the command, `git pull upstream main` 
+    - You will see some output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
+
