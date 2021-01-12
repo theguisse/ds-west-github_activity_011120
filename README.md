@@ -68,7 +68,7 @@ Once a commit has been made, you can type `git log`, and you will see the record
   
 Now, push your commit to the fork.  
     
-    - Type git push  
+  - Type git push  
       - by default, git will push to the origin.  Because your personal, forked copy is associated to the origin remote, you can just write git push.  
       - You could also be explicit, and write git push origin master  
       - Navigate to the Github url of your fork, and make sure you can see your new file  
@@ -76,55 +76,67 @@ Now, push your commit to the fork.
 # Task 3: Fetch/Merge or Pull new content from the upstream repository.  
   
 In order to retrieve new content from Github, you can use `git pull`.  
+
 By default, the `git pull` command retrieves content from the `origin` remote.    
-Remotes are variables which link your local version of a repository to the cloud, and there can be multiple links.  
-I will push a new file called 'zen_of_python.txt' to the original repo.    
+
+Remotes are variables which link your local version of a repository to the cloud, and there can be multiple links. 
+
+I will push a new file called 'zen_of_python.txt' to the original repo.      
   
 In order to get the `zen_of_python.txt` onto your computer, you now have to set up a new remote pointing to the original repo.    
-    - To do so, run the command `git remote add upstream https://github.com/learn-co-students/ds-west-github_activity_011120`    
-    - Notice that the url is the original repo, not your fork.    
-    - Now, when you type, `git remote -v` you should see two remotes, one pointing to your fork, and one pointing to the original repo.    
+  - To do so, run the command `git remote add upstream https://github.com/learn-co-students/ds-west-github_activity_011120`    
+  - Notice that the url is the original repo, not your fork.    
+  - Now, when you type, `git remote -v` you should see two remotes, one pointing to your fork, and one pointing to the original repo.    
       
 If you successfully added the remote, you can pull the new content:  
-    - Run the command, `git pull upstream main`    
-    - If successful, you will see output ending with `create mode 100644 zen_of_python.txt`    
-    - If you run `ls` you will now see zen_of_python.txt  
-    - Run cat 'zen_of_python.txt' to output the Zen in your terminal.   
+  - Run the command, `git pull upstream main`    
+  - If successful, you will see output ending with `create mode 100644 zen_of_python.txt`    
+  - If you run `ls` you will now see zen_of_python.txt  
+  - Run cat 'zen_of_python.txt' to output the Zen in your terminal.   
      
 Alternatively, you could run `git fetch upstream main` followed by `git merge upstream/main`  
-    - the `git pull` command performs a fetch and a merge in one command.   
-    - using `git fetch` and then `git merge` allows you to check the changes that will be made in your local copy before registering them.  
+  - the `git pull` command performs a fetch and a merge in one command.   
+  - using `git fetch` and then `git merge` allows you to check the changes that will be made in your local copy before registering them.  
   
 Warning: Merge conflict.   
-    - If for some reason I have edited this README.md file as I've proceeded with the lesson, and you have also edited it, you will run into a merge conflict.  
-    - If you try to merge changes on a file which has been changed   
-    - Your merge will fail, and you will have to commit your changes, then repeat the pull.  
-    - Still, your merge conflict will not be resolved.  After running the second `git pull`, open the file, which will now have text indications of where the versions differ.  
-    - Decide what changes to keep, or in other words, make the file look like you want it to look.    
-    - Finally, commit the merge  
+  - If for some reason I have edited this README.md file as I've proceeded with the lesson, and you have also edited it, you will run into a merge conflict.  
+  - If you try to merge changes on a file which has been changed   
+  - Your merge will fail, and you will have to commit your changes, then repeat the pull.  
+  - Still, your merge conflict will not be resolved.  After running the second `git pull`, open the file, which will now have text indications of where the versions differ.  
+  - Decide what changes to keep, or in other words, make the file look like you want it to look.    
+  - Finally, commit the merge  
   
   
 # Task 4: Branching and a Pull Request
 
 With a branch workflow, you identify a portion of a project which you have personal responibility.  To silo your work, you create a new branch whose name reflects the work you are doing.
-    - Create a new branch called yourname/eda_notebook using the command git checkout -b yourname/eda_notebook
-    - You will now be working on your new branch, which you can see by typing `git branch`
-    - Your new branch will have an asterisk by it, denoting that your branch is the active branch on your local machine
+  - Create a new branch called yourname/eda_notebook using the command git checkout -b yourname/eda_notebook
+  - You will now be working on your new branch, which you can see by typing `git branch`
+  - Your new branch will have an asterisk by it, denoting that your branch is the active branch on your local machine
     
 Jupyter notebooks don't play very well with Git.  When collaborating on your project teams, we will encourage you to create individual notebooks for you to store your individual exploratory work.  For the final deliverables, your team will create a final notebook, which is polished and ready for a visitor to your Github account.  Your working notebooks can be less polished.  
+  - `cd student_notebooks`  
+  - create a new jupyter notebook called your_name_eda.ipynb  
+  - do so by running `jupyter notebook`, open a new notebook, and rename it <your_name_eda> 
+Next, add/commit your notebook.
+  - `git add student_notebooks/<your_name_eda.ipynb`  
+  - `git commit -m "Add meaningful message here`
    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+Now it is time to push the change to the upstream repo.
+  - run `git push upstream`
+   
+Once you have pushed, you are ready to make a pull request.  Navigate to the orginal repo at https://github.com/learn-co-students/ds-west-github_activity_011120  
+You should see a big green button which reads Create Pull Request.  Click on that, and if there are no merge conflicts, I will be able to merge your work into the main branch.
+We are nearly finished.  Your work is now available for others to pull onto their local computer. 
+
+Let's move back to our local computer and merge the new changes:
+  - run `git checkout main`
+  - then, run `git pull origin master`
+
+You should see everyone's notebooks on your local computer.
+
+Last step, delete your branch.
+  - `git branch -d yourname/eda_notebook`
   
 The Zen of Python, by Tim Peters  
   
