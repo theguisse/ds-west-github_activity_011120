@@ -110,33 +110,40 @@ Warning: Merge conflict.
 # Task 4: Branching and a Pull Request
 
 With a branch workflow, you identify a portion of a project which you have personal responibility.  To silo your work, you create a new branch whose name reflects the work you are doing.
-  - Create a new branch called yourname/eda_notebook using the command git checkout -b yourname/eda_notebook
+  - Create a new branch called yourname/eda_notebook using the command `git checkout -b yourname/eda_notebook`
   - You will now be working on your new branch, which you can see by typing `git branch`
   - Your new branch will have an asterisk by it, denoting that your branch is the active branch on your local machine
     
 Jupyter notebooks don't play very well with Git.  When collaborating on your project teams, we will encourage you to create individual notebooks for you to store your individual exploratory work.  For the final deliverables, your team will create a final notebook, which is polished and ready for a visitor to your Github account.  Your working notebooks can be less polished.  
   - `cd student_notebooks`  
   - create a new jupyter notebook called your_name_eda.ipynb  
-  - do so by running `jupyter notebook`, open a new notebook, and rename it <your_name_eda> 
+  - do so by running `jupyter notebook`, open a new notebook, and rename it <your_name_eda>  
+  
 Next, add/commit your notebook.
-  - `git add student_notebooks/<your_name_eda.ipynb`  
-  - `git commit -m "Add meaningful message here`
+  - `git add student_notebooks/<your_name_eda.ipynb>`  
+  - `git commit -m "Add meaningful message here"`
    
 Now it is time to push the change to the upstream repo.
   - run `git push upstream`
    
-Once you have pushed, you are ready to make a pull request.  Navigate to the orginal repo at https://github.com/learn-co-students/ds-west-github_activity_011120  
+Once you have pushed, you are ready to make a pull request. 
+
+Navigate to the orginal repo at https://github.com/learn-co-students/ds-west-github_activity_011120  
+
 You should see a big green button which reads Create Pull Request.  Click on that, and if there are no merge conflicts, I will be able to merge your work into the main branch.
 We are nearly finished.  Your work is now available for others to pull onto their local computer. 
 
 Let's move back to our local computer and merge the new changes:
   - run `git checkout main`
-  - then, run `git pull origin master`
+  - then, run `git pull origin main`
 
 You should see everyone's notebooks on your local computer.
 
 Last step, delete your branch.
   - `git branch -d yourname/eda_notebook`
+
+
+------ 
   
 The Zen of Python, by Tim Peters  
   
