@@ -144,7 +144,7 @@ We are nearly finished.  Your work is now available for others to pull onto thei
 Let's move back to our local computer and merge the new changes:
  
   - run `git checkout main`
-  - then, run `git pull origin main`
+  - then, run `git pull upstream main`
 
 You should see everyone's notebooks on your local computer.
 
