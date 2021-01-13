@@ -82,7 +82,7 @@ Now, push your commit to the fork.
   
 In order to retrieve new content from Github, you can use `git pull`.  
 
-By default, the `git pull` command retrieves content from the `origin` remote.    
+Again, by default, the `git pull` command retrieves content from the `origin` remote.    
 
 Remotes are variables which link your local version of a repository to the cloud, and there can be multiple links. 
 
